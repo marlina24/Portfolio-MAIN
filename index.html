@@ -35,8 +35,6 @@
    
 
 
-
-
       <div class="presentation-container">
         <div class="presentation-content">
           <h1 class="title"><span class="highlight">Victor Marlina</span></h1>
@@ -47,7 +45,6 @@
         </div>
       </div>
     <header>
-
 
 
 
@@ -68,15 +65,13 @@
             Découvrez dans ce portfolio mes projets professionnels, ainsi que mon parcours, qui reflètent mon engagement et mes compétences dans le domaine.
           </p>
           <div class="button-container">
-            <button target="_blank" class="btn"><a href="NUEVO CV MARLINA.pdf" download="NUEVO CV MARLINA" class="btn">Télécharger le CV</a></button>
-            <button target="_blank" class="btn"><a href="Tableau_Synthèse.pdf" download="Tableau_Synthèse.pdf" class="btn">Tableau de synthèse</a></button>
-
-
-            <button target="_blank" class="btn"><a href="" download="" class="btn">Certifications</a></button>
-
+            <a href="CV MARLINA.pdf" target="_blank" class="btn">Voir le CV</a>
+            <a href="Tableau_Synthèse.pdf" target="_blank" class="btn">Voir le tableau de synthèse</a>
+            <a href="certifications.html" target="_blank" class="btn">Voir les certifications</a>
           </div>
         </div>
       </div>
+      
 <!-- Section des cards -->
 <div class="cards-container">
   <div class="card-wrapper">
@@ -172,7 +167,7 @@
   </div>
 </section>
    
-    <a href="https://enqdip.sup.adc.education.fr/bts/referentiel/BTS_ServicesInformatiquesOrganisations.pdf"><h2 class="skills-title">BTS SIO</h2></a>
+    <a href="https://www.francecompetences.fr/recherche/rncp/35340/"><h2 class="skills-title">BTS SIO</h2></a>
     <section class="timeline" id="section-btssio">
       <!-- Web Designer à gauche -->
       <div class="timeline-item left">
@@ -305,7 +300,7 @@
 <!--boutton voir plus de realisations-->
 
 
-<a href="/projets.html" class="btn">Voir plus de réalisations</a>
+<a href="projets.html" class="btn">Voir plus de réalisations</a>
 
 
 
@@ -317,44 +312,127 @@
       <h2 class="section-title">Projets</h2>
   </div>
 
-
-
-
   <div class="project-container">
-      <!-- Projet 1 : Client léger -->
-      <div class="project-item">
-          <div class="project-image">
-              <img src="passalternance7.webp" alt="Client léger">
-          </div>
-          <div class="project-details">
-              <h3>Pass'Alternance</h3>
-              <p>Pass'Alternance aide les étudiants à trouver une alternance en partageant les postes qu'ils libèrent,
-                 favorisant l'entraide et offrant des opportunités professionnelles.</p>
-              <button class="project-btn"><a target="_blank" href="https://pass-alternance1.vercel.app">
-                DÉCOUVRIR CLIENT LÉGER
-              </a></button>
-          </div>
-      </div>
+    <!-- Projet 1 : Client léger -->
+    <div class="project-item">
+        <div class="project-image">
+            <img src="passalternance7.webp" alt="Client léger">
+        </div>
+        <div class="project-details">
+            <h3>Pass'Alternance</h3>
+            <p>Pass'Alternance aide les étudiants à trouver une alternance en partageant les postes qu'ils libèrent,
+               favorisant l'entraide et offrant des opportunités professionnelles.</p>
+            <div class="button-group">
+                <button class="project-btn">
+                    <a target="_blank" href="https://pass-alternance1.vercel.app">VOIR CLIENT LÉGER</a>
+                </button>
+                <button class="project-btn" onclick="openModal('modalLeger')">
+                    VOIR DOCUMENTATION
+                </button>
+            </div>
+        </div>
+    </div>
 
-      <a href="TrelloMV.png" class="btn-trello" download target="_blank">Voir l'organisation</a>
+    <!-- Projet 2 : Client lourd -->
+    <div class="project-item" id="projects">
+        <div class="project-image">
+            <img src="PersonalFinance.png" alt="Client lourd">
+        </div>
+        <div class="project-details">
+            <h3>ÉcoPlan</h3>
+            <p>ÉcoPlan est une application de bureau qui aide les utilisateurs à suivre leurs dépenses, gérer leur budget et mieux comprendre leur situation financière.
+              Logiciel bureautique.
+            </p>
+            <div class="button-group">
+                <button class="project-btn">
+                    <a target="_blank" href="https://github.com/marlina24/Carnet-de-finances">VOIR CLIENT LOURD</a>
+                </button>
+                <button class="project-btn" onclick="openModal('modalLourd')">
+                    VOIR DOCUMENTATION
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- POPUP MODALS -->
+<div id="modalLeger" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalLeger')">&times;</span>
+        <h2>Cahier des charges - Pass'Alternance</h2>
+        <iframe src="CDC_passAlter.pdf" width="100%" height="600px" style="border: none;"></iframe>
+    </div>
+</div>
 
-      <!-- Projet 2 : Client lourd -->
-      <div class="project-item" id="projects">
-          <div class="project-image">
-              <img src="PersonalFinance.png" alt="Client lourd">
-          </div>
-          <div class="project-details">
-              <h3>ÉcoPlan</h3>
-              <p>ÉcoPlan est une application de bureau qui aide les utilisateurs à suivre leurs dépenses, gérer leur budget et mieux comprendre leur situation financière.
-                Simple et pratique, elle sensibilise à l’importance d’une bonne gestion de l’argent.</p>
-                 <button class="project-btn"><a target="_blank" href="https://github.com/marlina24/Carnet-de-finances">
-                  DÉCOUVRIR CLIENT LOURD
-                </a></button>
-          </div>
-      </div>
-  </div>
-</section>
+<div id="modalLourd" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalLourd')">&times;</span>
+        <h2>Cahier des charges - ÉcoPlan</h2>
+        <iframe src="CDC_EcoPlan.pdf" width="100%" height="600px" style="border: none;"></iframe>
+    </div>
+</div>
+
+<!-- STYLE POUR LE POPUP -->
+<style>
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* fond noir transparent */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: black;
+}
+</style>
+
+<!-- SCRIPT POUR OUVRIR ET FERMER AVEC ANIMATION -->
+<script>
+function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "block";
+    setTimeout(() => {
+        modal.classList.add("show");
+    }, 10);
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.remove("show");
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300); // Temps de la transition
+}
+</script>
 
 
 

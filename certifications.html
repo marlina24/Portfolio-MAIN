@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes Certifications</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0a1a2f;
+        color: white;
+      }
+
+      header {
+        text-align: center;
+        background-color: #08101f;
+        padding: 30px 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      .certifications-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+
+      .certif-box {
+        background: #1a1a1a; /* Gris foncé */
+        border-radius: 15px;
+        overflow: hidden;
+        width: 350px;
+        height: 500px;
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .certif-box.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .certif-box:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+      }
+
+      .certif-box embed {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        border: none;
+        background: white; /* Fond blanc pour le PDF */
+      }
+
+      .btn-retour {
+        display: inline-block;
+        margin: 50px auto;
+        background-color: #a259ff;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+
+      .btn-retour:active {
+        transform: scale(1.1);
+      }
+
+      @media screen and (max-width: 768px) {
+        .certif-box {
+          width: 90%;
+          height: 400px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Mes Certifications</h1>
+    </header>
+
+    <div class="certifications-grid" id="certifications">
+      <div class="certif-box">
+        <embed src="certif_1.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_2.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_3.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_4.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_5.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_6.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_7.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certif-box">
+        <embed src="certif_8.pdf" type="application/pdf" />
+      </div>
+    </div>
+
+    <div style="text-align: center">
+      <a href="https://portfolio-vm-jac7.vercel.app/" class="btn-retour"
+        >← Retour à l'accueil</a
+      >
+    </div>
+
+    <script>
+      const certifs = document.querySelectorAll(".certif-box");
+      window.addEventListener("scroll", () => {
+        certifs.forEach((box) => {
+          const pos = box.getBoundingClientRect().top;
+          const screenHeight = window.innerHeight * 0.9;
+          if (pos < screenHeight) {
+            box.classList.add("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

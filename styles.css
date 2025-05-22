@@ -116,8 +116,9 @@ html {
 
 .presentation-container p {
   font-size: 1.2rem;
-  max-width: 90%;
+  width: 100%;
   word-wrap: break-word;
+  overflow-wrap: break-word; /* Ajoute cette ligne pour plus de compatibilité */
 }
 
 .vertical-line {
@@ -1030,6 +1031,9 @@ html {
   background-color: #8f00ff;
 }
 
+.project-test {
+  height: 100px;
+}
 /* Container Styles */
 .carousel-wrapper {
   display: flex;
@@ -2193,4 +2197,26 @@ a {
   #contact-section {
     height: 180vh;
   }
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* espace entre les boutons */
+}
+
+.project-btn a {
+  text-decoration: none; /* enlève le soulignement du lien */
+  color: white; /* couleur du texte */
+}
+
+.project-btn {
+  background-color: #a259ff; /* couleur du bouton */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-btn:hover {
+  background-color: #661e6b; /* couleur au survol */
 }
